@@ -31,6 +31,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 }
 
+bootJar {
+    enabled = false
+}
+
 compileJava {
 //    options.compilerArgs += ['--enable-preview']
 }
