@@ -1,5 +1,9 @@
 # CORS Configuration for Spring WebMVC
 
+## Prerequisites
+
+- JDK 16+
+
 ## Properties File
 
 See example:
@@ -99,10 +103,8 @@ java ... -Dspring.profiles.active=local ...
 
 Intellij community allows you to insert them to VM options.
 
-![인텔리제이 브이엠 옵션스](intellij-vm-options.jpeg)
-
-Insert to VM Options:
-
 ```text
 -Dspring.profiles.active=local
 ```
+
+![인텔리제이 브이엠 옵션스](intellij-vm-options.jpeg)
