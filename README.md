@@ -60,7 +60,7 @@ Max Age(at Browser): 1800 [sec]
 
 # Apply with Custom File
 
-You can apply with the custom files.
+You can apply it with the custom files.
 If their directories and file names are `resources/app/cors/cors.yml`
 or `resources/app/cors/cors-{profile}.yml`,
 you can import them to `application.yml` or `application.properties`.
@@ -76,7 +76,7 @@ spring:
 
 ## Active Profile Supported
 
-Just import `cors.yml`, then another files will be imported when the profile is included to active profiles.
+Just import `cors.yml`, then other files with profiles will be imported when the profile is included to active profiles.
 
 - `cors.yml`
 - `cors-dev.yml` (when active profiles include "dev" profile.)
@@ -91,16 +91,18 @@ Or you can insert the active profiles to VM arguments.
 
 Example:
 
-Run with "local" active profile.
+When running with the "local" active profile.
 
 ```shell
 java ... -Dspring.profiles.active=local ...
 ```
 
-Intellij community allows you insert them to VM options.
+Intellij community allows you to insert them to VM options.
+
+![인텔리제이 브이엠 옵션스](intellij-vm-options.jpeg)
+
+Insert to VM Options:
 
 ```text
 -Dspring.profiles.active=local
 ```
-
-![인텔리제이 브이엠 옵션스](intellij-vm-options.jpeg)
