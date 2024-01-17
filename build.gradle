@@ -5,7 +5,7 @@ plugins {
     id 'maven-publish'
 }
 
-group = 'com.example'
+group = 'com.github.merge-simpson'
 version = '0.0.1-SNAPSHOT'
 
 java {
