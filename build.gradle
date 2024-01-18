@@ -32,17 +32,35 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
 }
 
+//publishing {
+//    publications {
+//        mavenJava(MavenPublication){
+//            // jar is the default build task configured by Spring Boot if bootJar=false
+//            artifact jar
+//        }
+//    }
+//}
+
 publishing {
     publications {
-        mavenJava(MavenPublication){
-            // jar is the default build task configured by Spring Boot if bootJar=false
-            artifact bootJar
+        "$project.name"(MavenPublication) {
+            artifactId project.name
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = 'https://github.com/merge-simpson/webmvc-cors-config-core'
         }
     }
 }
 
 bootJar {
-    enabled = true
+    enabled = false
+}
+
+jar {
+    enabled=true
 }
 
 compileJava {
