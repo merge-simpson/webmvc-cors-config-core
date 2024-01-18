@@ -36,17 +36,13 @@ publishing {
     publications {
         mavenJava(MavenPublication){
             // jar is the default build task configured by Spring Boot if bootJar=false
-            artifact jar
+            artifact bootJar
         }
     }
 }
 
 bootJar {
-    enabled = false
-}
-
-jar {
-    enabled=true
+    enabled = true
 }
 
 compileJava {
